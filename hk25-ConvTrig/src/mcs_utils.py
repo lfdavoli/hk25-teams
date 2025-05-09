@@ -548,10 +548,10 @@ def _check_time_before_trigger_validity(
     sample_frequency = _get_sample_frequency(data_field)
     if (times_before_trigger % sample_frequency) != 0:
         raise ValueError(
-            f"Please provide a 'times_before_trigger' that is a multiple of " +
-            f"the sampling frequency of the data field. The sampling " +
+            "Please provide a 'times_before_trigger' that is a multiple of " +
+            "the sampling frequency of the data field. The sampling " +
             f"frequency is {(sample_frequency / np.timedelta64(1, 'h'))[0]} " +
-            f"hours.")
+            "hours.")
     
 
 def _select_trigger_area_idxs(
