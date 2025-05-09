@@ -8,9 +8,9 @@
 mkdir Downloads
 cd Downloads
 wget https://raw.githubusercontent.com/digital-earths-global-hackathon/tools/refs/heads/main/python_envs/environment.yaml
+# Can take a few minutes.
 conda env create -f environment.yaml -n hackathon_env
-conda activate hackathon_env
-python -m ipykernel install --user --name hackathon_env  # is this step necessary?
+conda run -n hackathon_env python -m ipykernel install --user --name hackathon_env
 ```
 4. [wait a couple of minutes]
 5. Create a new notebook, you *should* be able to select `hackathon_env` 
